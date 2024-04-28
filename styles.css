@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Calculator container */
+#calculator {
+    width: 300px;
+    margin: 50px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Display area */
+#display {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 24px;
+}
+
+/* Calculator buttons */
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+}
+
+/* Button style */
+button {
+    padding: 20px 10px; /* Adjusted padding */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+/* Equal button style */
+#equals {
+    grid-column: span 2; /* Span 2 columns */
+    background-color: #ff9800; /* Orange */
+    color: #fff;
+}
+
+/* Clear button style */
+#clear {
+    background-color: #f44336; /* Red */
+    color: #fff;
+}
