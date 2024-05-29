@@ -2,7 +2,7 @@
 
 /* Calculator container */
 #calculator {
-    width: 300px;
+    width: 335px;
     margin: 50px auto;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -19,13 +19,18 @@
     margin-bottom: 10px;
     text-align: right;
     font-size: 24px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-/* Calculator buttons */
+/* Buttons container */
 #buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 2px;
 }
 
 /* Button style */
@@ -34,9 +39,9 @@ button {
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor:pointer;
     background-color: #e0e0e0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 button:hover {
@@ -45,7 +50,8 @@ button:hover {
 
 /* Equal button style */
 #equals {
-    grid-column: span 2; /* Span 2 columns */
+    grid-column: 4; /* Place in the last column */
+    grid-row: span 2; /* Span 2 rows */
     background-color: #ff9800; /* Orange */
     color: #fff;
 }
@@ -54,4 +60,8 @@ button:hover {
 #clear {
     background-color: #f44336; /* Red */
     color: #fff;
+}
+
+.operator {
+    background-color: aqua;
 }
